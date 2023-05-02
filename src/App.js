@@ -24,7 +24,7 @@ const App = () => {
       <button onClick={() => setAnimal([...animals, getRandomAnimal()])}>
         Add Animal
       </button>
-      <div>{animals}</div>
+      <div className="main-contaibner">{renderdAnimals}</div>
     </>
   );
 };

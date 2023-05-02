@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import bird from "../src/svg/bird.svg";
+import cat from "../src/svg/cat.svg";
+import cow from "../src/svg/cow.svg";
+import dog from "../src/svg/dog.svg";
+import gator from "../src/svg/gator.svg";
+import horse from "../src/svg/horse.svg";
+import heart from "../src/svg/heart.svg";
 
-const AnimalShow = () => {
+// crating an object for animals svg
+const svgMap = {
+  bird,
+  cat,
+  cow,
+  dog,
+  gator,
+  horse,
+};
+
+const AnimalShow = ({ type }) => {
+  const [click, setClick] = useState(0);
+
+  const handleClick = () => {
+    setClick(click + 1);
+  };
+
   return (
-    <>
-      <h1>ANIMAL</h1>
-    </>
+    <div onClick={handleClick} className="animalshow-section">
+      <img alt="animals" src={svgMap[type]} />
+      <img
+        alt="heart"
+        src={heart}
+        style={{ width: 10 + 10 * click + "px", maxWidth: "150px" }}
+      />
+    </div>
   );
 };
 
