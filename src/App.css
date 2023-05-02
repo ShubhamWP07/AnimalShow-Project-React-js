@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App-contaibner {
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.add-btn {
+  padding: 15px 35px;
+  border: none;
+  background-color: #ca1e32;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.animal-app-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

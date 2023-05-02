@@ -6,6 +6,7 @@ import dog from "../src/svg/dog.svg";
 import gator from "../src/svg/gator.svg";
 import horse from "../src/svg/horse.svg";
 import heart from "../src/svg/heart.svg";
+import "./AnimalShow.css";
 
 // crating an object for animals svg
 const svgMap = {
@@ -26,11 +27,12 @@ const AnimalShow = ({ type }) => {
 
   return (
     <div onClick={handleClick} className="animalshow-section">
-      <img alt="animals" src={svgMap[type]} />
+      <img alt="animals" src={svgMap[type]} className="animals-img" />
       <img
         alt="heart"
         src={heart}
-        style={{ width: 10 + 10 * click + "px", maxWidth: "150px" }}
+        style={{ width: 10 + 10 * click + "px", maxWidth: "50px" }}
+        className="heart"
       />
     </div>
   );

@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import AnimalShow from "./AnimalShow";
+import "./App.css";
 
 // declaring getAnimals function and return a random animal array
 function getRandomAnimal() {
@@ -20,12 +21,15 @@ const App = () => {
   });
 
   return (
-    <>
-      <button onClick={() => setAnimal([...animals, getRandomAnimal()])}>
+    <div className="App-contaibner">
+      <button
+        className="add-btn"
+        onClick={() => setAnimal([...animals, getRandomAnimal()])}
+      >
         Add Animal
       </button>
-      <div className="main-contaibner">{renderdAnimals}</div>
-    </>
+      <div className="animal-app-sec">{renderdAnimals}</div>
+    </div>
   );
 };
 
